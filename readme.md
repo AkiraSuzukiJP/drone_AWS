@@ -114,3 +114,6 @@ php artisan serve --port=8080
 npm install 
 npm install vue
 npm install vue-router
+
+## Webpack を起動
+npm run watch
