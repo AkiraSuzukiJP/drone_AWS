@@ -32,6 +32,10 @@
         <td>{{ $flight_record->notices}}</td>
         <td>{{ $flight_record->flight_date}}</td>
     </tr>
+    <div id="app">
+            <example-component></example-component>
+    </div>
+    <script src="js/app.js"></script>
     @endforeach
 </table>
 <button><a href="{{ url('/') }}" class="text-sm text-gray-700 underline">戻る</a></button>
