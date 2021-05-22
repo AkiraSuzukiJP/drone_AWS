@@ -110,3 +110,6 @@ php artisan db:seed
 ## 起動
 php artisan serve --port=8080
 
+## vue.js環境構築設定
+npm npm install 
+
