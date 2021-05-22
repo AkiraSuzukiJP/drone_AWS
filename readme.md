@@ -116,4 +116,4 @@ npm install vue
 npm install vue-router
 
 ## Webpack を起動
-npm run watch
+npm run dev
