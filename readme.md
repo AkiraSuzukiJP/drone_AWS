@@ -112,4 +112,5 @@ php artisan serve --port=8080
 
 ## vue.js環境構築設定
 npm npm install 
-
+npm install vue
+npm install vue-router
