@@ -76,3 +76,41 @@ git clone https://github.com/AkiraSuzukiJP/drone_AWS.git
 cd  drone_AWS/
 cp .env.example .env
 
+## 認証機能の追加
+php artisan make:auth
+
+## .envの修正
+DB_CONNECTION以外のDBに関する情報を削除し、DB_CONNECTIONのパラメータ値をsqliteとします
+
+# #DB作成
+sqlite3 database/database.sqlite
+.tables
+.exit
+
+## 起動
+php artisan serve --port=8080
+
+## モデル作成
+php artisan make:model -m Aircraft
+php artisan make:model -m Pilot
+php artisan make:model -m Inspector
+php artisan make:model -m InspectionRrecord
+php artisan make:model -m FlightRecord
+
+## seeder作成
+php artisan migrate
+php artisan make:seeder FlightRecordTableSeeder
+php artisan make:seeder InspectionRecordTableSeeder
+php artisan make:seeder PilotTableSeeder
+php artisan make:seeder InspectorTableSeeder
+php artisan make:seeder AircraftTableSeeder
+php artisan db:seed
+
+## controller作成
+php artisan make:controller PilotController
+php artisan make:controller InspectorController
+php artisan make:controller AircraftController
+php artisan make:controller FlightRecordController
+php artisan make:controller InspectionRrecordController
+
+
