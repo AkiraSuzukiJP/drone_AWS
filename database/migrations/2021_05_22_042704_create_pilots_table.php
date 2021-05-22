@@ -15,6 +15,8 @@ class CreatePilotsTable extends Migration
     {
         Schema::create('pilots', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name')->nullable()->comment('操縦者名');
+            $table->string('belong')->nullable()->comment('所属名');
             $table->timestamps();
         });
     }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Inspector;
 
 class InspectorTableSeeder extends Seeder
 {
@@ -12,5 +13,9 @@ class InspectorTableSeeder extends Seeder
     public function run()
     {
         //
+        $model = new Inspector;
+        /* #点検者名 */
+        $model->name = '鈴木　昭';
+        $model->save();
     }
 }

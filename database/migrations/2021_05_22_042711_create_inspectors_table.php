@@ -15,6 +15,7 @@ class CreateInspectorsTable extends Migration
     {
         Schema::create('inspectors', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name')->nullable()->comment('点検者名');
             $table->timestamps();
         });
     }
