@@ -46,5 +46,6 @@
     </tr>
     @endforeach
 </table>
+<button><a href="{{ url('/') }}" class="text-sm text-gray-700 underline">戻る</a></button>
 @endsection
 
