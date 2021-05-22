@@ -72,27 +72,26 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-## ŠÂ‹«¶¬
+## ç’°å¢ƒç”Ÿæˆ
 git clone https://github.com/AkiraSuzukiJP/drone_AWS.git
 cd  drone_AWS/
 cp .env.example .env
 
-## ƒ‚ƒfƒ‹ì¬
+## ãƒ¢ãƒ‡ãƒ«ä½œæˆ
 php artisan make:model -m Aircraft
 php artisan make:model -m Pilot
 php artisan make:model -m Inspector
 php artisan make:model -m InspectionRrecord
 php artisan make:model -m FlightRecord
 
-## seederì¬
-
+## seederä½œæˆ
 php artisan make:seeder FlightRecordTableSeeder
 php artisan make:seeder InspectionRecordTableSeeder
 php artisan make:seeder PilotTableSeeder
 php artisan make:seeder InspectorTableSeeder
 php artisan make:seeder AircraftTableSeeder
 
-## controllerì¬
+## controllerä½œæˆ
 php artisan make:controller PilotController
 php artisan make:controller InspectorController
 php artisan make:controller AircraftController
@@ -100,7 +99,7 @@ php artisan make:controller FlightRecordController
 php artisan make:controller InspectionRrecordController
 
 
-##DBì¬
+## DBä½œæˆ
 sqlite3 database/database.sqlite
 .tables
 .exit
@@ -108,6 +107,6 @@ sqlite3 database/database.sqlite
 php artisan migrate
 php artisan db:seed
 
-## ‹N“®
+## èµ·å‹•
 php artisan serve --port=8080
 
