@@ -16,6 +16,15 @@ Route::get('/', function () {
     //return view('home');
     return view('menu');
 });
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/menu', function () {
+    return view('menu');
+});
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
