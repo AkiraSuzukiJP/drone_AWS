@@ -6,13 +6,16 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue';
 import VueRouter from 'vue-router';
-window.Vue.use(VueRouter);
 import Vuex from 'vuex';
-window.Vue.use(Vuex);
-window.BootstrapVue = require('bootstrap-vue');
-window.Vue.use(window.BootstrapVue);
+import BootstrapVue from 'bootstrap-vue';
+
+window.Vue = require('vue');
+//import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+Vue.use(Vuex);
+Vue.use(BootstrapVue);
 
 /**
  * The following block of code may be used to automatically register your
@@ -25,7 +28,7 @@ window.Vue.use(window.BootstrapVue);
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-window.Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 const router = new VueRouter({
     mode: 'history',
