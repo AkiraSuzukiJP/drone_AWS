@@ -17,10 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource("aircrafts", "AircraftController");
 Route::resource("pilots", "PilotController");
 Route::resource("inspectors", "InspectorController");
 Route::resource("inspection_rrecords", "InspectionRrecordController");
 Route::resource("flight_records", "FlightRecordController");
+
+Route::get('/{any}', function () {
+    Route::auth();
+    return view('layouts.app');
+})->where('any', '.*')->middleware('auth');
