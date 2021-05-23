@@ -101,4 +101,14 @@
             </div>
         </div>
     </body>
+    
+        <!-- laravelmix style -->
+        <meta name="csrf-token" content="{{ csrf_token() }}"> 
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <div id="app">
+            <example-component></example-component>
+        </div>
+        <!-- laravelmix-style -->
+        <script src="{{ mix('js/app.js') }}"></script>
+    
 </html>
