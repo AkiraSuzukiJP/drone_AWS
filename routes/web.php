@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
-
 
 Route::resource("aircrafts", "AircraftController");
 Route::resource("pilots", "PilotController");
