@@ -114,6 +114,8 @@ php artisan serve --port=8080
 npm install 
 npm install vue
 npm install vue-router
+npm install vuex
+npm install bootstrap-vue
 
 ## Webpack を起動
 npm run dev
