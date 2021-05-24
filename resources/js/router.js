@@ -12,9 +12,9 @@ export default new Router({
     //機体一覧
     { path: '/aircrafts', name: 'aircrafts', component: require('./components/AircraftsComponent.vue').default },
     //操縦者一覧
-    //{ path: '/pilots', name: 'pilots', component: require('./components/PilotsComponent.vue').default },
+    { path: '/pilots', name: 'pilots', component: require('./components/PilotsComponent.vue').default },
     //点検者一覧
-    //{ path: '/inspectors', name: 'inspectors', component: require('./components/InspectorsComponent.vue').default },
+    { path: '/inspectors', name: 'inspectors', component: require('./components/InspectorsComponent.vue').default },
     //点検記録一覧
     //飛行記録一覧
     //設定管理
