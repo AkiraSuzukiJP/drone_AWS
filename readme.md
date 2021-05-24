@@ -119,3 +119,8 @@ npm install bootstrap-vue
 
 ## Webpack を起動
 npm run dev
+
+## commit & push
+git commit -m "更新理由" 更新ファイル1 更新ファイル2 ...
+git push 
+ eg. user_name:AkiraSuzukiJP
