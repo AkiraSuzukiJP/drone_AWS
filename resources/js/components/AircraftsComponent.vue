@@ -29,6 +29,8 @@
                                 <th class="text-center bg-info text-white d-md-table-cell">報告義務機体</th>
                             </tr>
                         </thead>
+
+                        <loading :active.sync="isLoading"></loading>
             
                         <tbody>
                             <tr v-for="aircraft in results" class="clickable" :key="aircraft.index" @click="onShow(aircraft.id)">
@@ -42,17 +44,9 @@
                                 <td class="text-center align-middle">{{ aircraft.is_report }}</td>
                             </tr>
                         </tbody>
-                        <loading :active.sync="isLoading"></loading>
+
                     </table>
-                    
-                    <pagination
-                        :page="currentPage"
-                        :itemsPerPage="itemsPerPage"
-                        :maxVisiblePages="maxVisiblePages"
-                        :totalItems="totalItems"
-                        @pageChange="pageChange"
-                    />
-                    
+
                 </div>
             </div>
         </div>
