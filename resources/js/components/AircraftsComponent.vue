@@ -87,7 +87,7 @@ export default {
             //this.$router.push({ name: 'customer.create' })
         },
         onShow: function (id) {
-            //this.$router.push({ name: 'customer.show', params: {id: id} })
+            this.$router.push({ name: 'aircrafts.show', params: {id: id} })
         },
         onBack() {
             this.$router.push({ name: 'menu' })
