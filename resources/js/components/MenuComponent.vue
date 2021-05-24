@@ -4,16 +4,11 @@
         <div class="card-body">
             <h3 class="title-margin mt-3 mb-5">メニュー</h3>
             <div class="d-flex flex-wrap justify-content-center mb-2">
-                <router-link :to="{ name: 'lesson1' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン1</router-link>
-                <router-link :to="{ name: 'lesson2' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン2</router-link>
-                <router-link :to="{ name: 'lesson3' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン3</router-link>
-                <router-link :to="{ name: 'lesson4' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン4</router-link>
-                <router-link :to="{ name: 'lesson5' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン5</router-link>
-                <router-link :to="{ name: 'lesson6' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン6</router-link>
-                <router-link :to="{ name: 'lesson7' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン7</router-link>
-                <router-link :to="{ name: 'lesson8' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン8</router-link>
-                <router-link :to="{ name: 'lesson9' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン9</router-link>
-                <router-link :to="{ name: 'lesson10' }" class="btn btn-primary btn-menu mr-3 mb-3">レッスン10</router-link>
+                <router-link :to="{ name: 'aircrafts' }" class="btn btn-primary btn-menu mr-3 mb-3">機体一覧</router-link>
+                <router-link :to="{ name: 'pilots' }" class="btn btn-primary btn-menu mr-3 mb-3">操縦者一覧</router-link>
+                <router-link :to="{ name: 'inspectors' }" class="btn btn-primary btn-menu mr-3 mb-3">点検者一覧</router-link>
+                <router-link :to="{ name: 'inspection_rrecords' }" class="btn btn-primary btn-menu mr-3 mb-3">点検記録一覧</router-link>
+                <router-link :to="{ name: 'flight_records' }" class="btn btn-primary btn-menu mr-3 mb-3">飛行記録一覧</router-link>
                 <router-link :to="{ name: 'setting' }" class="btn btn-secondary btn-menu mr-3 mb-3">設定管理</router-link>
             </div>
         </div>
