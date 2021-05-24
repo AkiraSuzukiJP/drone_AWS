@@ -41,30 +41,19 @@ class AircraftController extends Controller
     {
         return new AircraftForShowResource($customer);
     }
-/*
     //
-    public function update(Request $request, Customer $customer)
+    public function update(Request $request, Aircraft $aircraft)
     {
-        $count = Customer::where([
-            ['id', '<>', $customer->id],
-            ['code', $request->customer['code']]
-        ])->count();
-        if ($count) {
-            return response()->json([
-                'result' => false,
-                'errorMessage' => 'コードは既に登録されています。'
-            ]);
-        }
         DB::transaction(function () use ($request, $customer) {
-            $customer->code = $request->customer['code'];
-            $customer->name = $request->customer['name'];
-            $customer->postal_code = $request->customer['postal_code'];
-            $customer->address = $request->customer['address'];
-            $customer->tel = $request->customer['tel'];
-            $customer->fax = $request->customer['fax'];
-            $customer->closing_day = $request->customer['closing_day'];
+            $$aircraft->manufacturer = $request->aircraft['manufacturer'];
+            $$aircraft->name = $request->aircraft['name'];
+            $$aircraft->serialNo = $request->aircraft['serialNo'];
+            $$aircraft->owner = $request->aircraft['owner'];
+            $$aircraft->type = $request->aircraft['type'];
+            $$aircraft->weight = $request->aircraft['weight'];
+            $$aircraft->is_report = $request->aircraft['is_report'];
 
-            $customer->save();
+            $$aircraft->save();
         });
 
         return response()->json([
@@ -72,16 +61,17 @@ class AircraftController extends Controller
         ]);
     }
     //
-    public function destroy(Customer $customer)
+    public function destroy(Aircraft $aircraft)
     {
-        DB::transaction(function () use ($customer) {
-            $customer->delete();
+        DB::transaction(function () use ($aircraft) {
+            $aircraft->delete();
         });
 
         return response()->json([
             'result' => true,
         ]);
     }
+/*
     //
     public function selector(Request $request)
     {
