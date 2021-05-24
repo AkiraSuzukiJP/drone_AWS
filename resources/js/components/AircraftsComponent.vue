@@ -63,8 +63,8 @@ export default {
             // routes/api.phpにルーティングを設定する
             // Route::get('aircrafts', 'AircraftController@index');
             // ↑これがControllerとの紐づけ定義
-            const {data} = await axios.get('/aircrafts')
-            this.results = data
+            const response = await axios.get('/aircrafts')
+            this.results = response.data.data
         },
         onBack() {
             this.$router.push({ name: 'menu' })
