@@ -12,24 +12,36 @@
                             <button type="button" class="btn btn-dark" @click="onBack">戻る</button>
                         </div>
                     </div>
+
+                    <table class="table-custom mb-3">
+                        <thead>
+                            <tr>
+                                <th class="text-center bg-info text-white">ID</th>
+                                <th class="text-center bg-info text-white d-md-table-cell">製造者名.</th>
+                                <th class="text-center bg-info text-white d-md-table-cell">機体名称</th>
+                                <th class="text-center bg-info text-white d-md-table-cell">製造番号等</th>
+                                <th class="text-center bg-info text-white d-md-table-cell">所有者名</th>
+                                <th class="text-center bg-info text-white d-md-table-cell">機体の種類</th>
+                                <th class="text-center bg-info text-white d-md-table-cell">最大離陸重量(kg)</th>
+                                <th class="text-center bg-info text-white d-md-table-cell">報告義務機体</th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+                            <tr v-for="aircraft in results" :key="aircraft.index" >
+                                <td class="text-center align-middle">{{ aircraft.id }}</td>
+                                <td class="text-center align-middle">{{ aircraft.manufacturer }}</td>
+                                <td class="text-center align-middle">{{ aircraft.name }}</td>
+                                <td class="text-center align-middle">{{ aircraft.serialNo }}</td>
+                                <td class="text-center align-middle">{{ aircraft.owner }}</td>
+                                <td class="text-center align-middle">{{ aircraft.type }}</td>
+                                <td class="text-center align-middle">{{ aircraft.weight }}</td>
+                                <td class="text-center align-middle">{{ aircraft.is_report }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     
-                    // ここにデータを表示
-                    <h3>登録機体</h3>
-                    <p>-results-----------------</p>
-                    {{results}}
-                    <p>-------------------------</p>
-                    <div v-for="aircraft in results" :key="aircraft.index">
-                        <p>=========================</p>
-                        <p>ID：{{ aircraft.id }}</p>
-                        <p>製造者名：{{ aircraft.manufacturer }}</p>
-                        <p>機体名称：{{ aircraft.name }}</p>
-                        <p>製造番号等：{{ aircraft.serialNo }}</p>
-                        <p>所有者名：{{ aircraft.owner }}</p>
-                        <p>機体の種類：{{ aircraft.type }}</p>
-                        <p>最大離陸重量(kg)：{{ aircraft.weight }}</p>
-                        <p>報告義務機体フラグ：{{ aircraft.is_report }}</p>
-                        <p>=========================</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
