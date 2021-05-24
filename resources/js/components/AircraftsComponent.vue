@@ -38,6 +38,7 @@ export default {
     },
     mounted () {
         //
+        this.getInit()
     },
     watch: {
         //
