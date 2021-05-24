@@ -50,7 +50,7 @@ export default {
             // routes/api.phpにルーティングを設定する
             // Route::get('lesson/selector', 'API\LessonController@index');
             // ↑これがControllerとの紐づけ定義
-            const {data} = await axios.get('/api/aircrafts')
+            const {data} = await axios.get('/aircrafts')
             this.results = data
         },
         onBack() {
