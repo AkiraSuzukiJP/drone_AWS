@@ -18,6 +18,18 @@
                     <p>-results-----------------</p>
                     {{results}}
                     <p>-------------------------</p>
+                    <div v-for="aircraft in results" :key="aircraft.index">
+                        <p>=========================</p>
+                        <p>ID：{{ aircraft.id }}</p>
+                        <p>製造者名：{{ aircraft.manufacturer }}</p>
+                        <p>機体名称：{{ aircraft.name }}</p>
+                        <p>製造番号等：{{ aircraft.serialNo }}</p>
+                        <p>所有者名：{{ aircraft.owner }}</p>
+                        <p>機体の種類：{{ aircraft.type }}</p>
+                        <p>最大離陸重量(kg)：{{ aircraft.weight }}</p>
+                        <p>報告義務機体フラグ：{{ aircraft.is_report }}</p>
+                        <p>=========================</p>
+                    </div>
                 </div>
             </div>
         </div>
