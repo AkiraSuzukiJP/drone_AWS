@@ -30,8 +30,6 @@
                             </tr>
                         </thead>
 
-                        <loading :active.sync="isLoading"></loading>
-            
                         <tbody>
                             <tr v-for="aircraft in results" class="clickable" :key="aircraft.index" @click="onShow(aircraft.id)">
                                 <td class="text-center align-middle">{{ aircraft.id }}</td>
@@ -45,6 +43,8 @@
                             </tr>
                         </tbody>
 
+                        <loading :active.sync="isLoading"></loading>
+            
                     </table>
 
                 </div>
