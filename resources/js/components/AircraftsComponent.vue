@@ -61,7 +61,7 @@ export default {
     methods: {
         async getInit() {
             // routes/api.phpにルーティングを設定する
-            // Route::get('lesson/selector', 'API\LessonController@index');
+            // Route::get('aircrafts', 'AircraftController@index');
             // ↑これがControllerとの紐づけ定義
             const {data} = await axios.get('/aircrafts')
             this.results = data
