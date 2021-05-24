@@ -10,6 +10,7 @@ class AircraftController extends Controller
     //
     function index(){
         $aircrafts = Aircraft::all();
-        return view("aircrafts.index", compact("aircrafts"));
+        //return view("aircrafts.index", compact("aircrafts"));
+        return AircraftsForList::collection($aircrafts);
     }
 }
