@@ -19,4 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::middleware(['auth:api'])->group(function () {
     //機体
     Route::get('aircrafts', 'AircraftController@index');
+    Route::post('aircrafts', 'AircraftController@store');
+    Route::get('aircrafts/{aircrafts}', 'AircraftController@show');
+    //Route::post('aircrafts/{aircrafts}', 'AircraftController@update');
+    //Route::delete('aircrafts', 'AircraftController@destroy');
+    //Route::get('aircrafts/selector', 'AircraftController@selector');
 });

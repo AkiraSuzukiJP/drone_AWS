@@ -11,6 +11,8 @@ export default new Router({
     { path: '/', name: 'menu', component: require('./components/MenuComponent.vue').default },
     //機体一覧
     { path: '/aircrafts', name: 'aircrafts', component: require('./components/AircraftsComponent.vue').default },
+    { path: '/aircrafts/show:id', name: 'aircrafts.show', component: require('./components/AircraftsChangeComponent.vue').default, props: true},
+    { path: '/aircrafts/create', name: 'aircrafts.create', component: require('./components/AircraftsChangeComponent.vue').default, props: true},
     //操縦者一覧
     { path: '/pilots', name: 'pilots', component: require('./components/PilotsComponent.vue').default },
     //点検者一覧
