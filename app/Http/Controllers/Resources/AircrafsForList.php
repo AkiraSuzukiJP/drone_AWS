@@ -16,7 +16,13 @@ class AircraftsForList extends JsonResource
     {
         return [
             'id' => $this->id,
-            'code' => $this->code,
+            'manufacturer' => $this->manufacturer,
+            'name' => $this->name,
+            'serialNo' => $this->serialNo,
+            'owner' => $this->owner,
+            'type' => $this->type,
+            'weight' => $this->weight,
+            'is_report' => $this->is_report,
         ];
     }
 }
