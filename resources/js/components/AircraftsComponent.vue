@@ -8,12 +8,15 @@
                         <div class="mr-auto">
                             <span class="span-header">機体一覧</span>
                         </div>
+                        <div class="align-self-center mr-3">
+                            <button type="button" class="btn btn-primary" @click="onCreate"><i class="fas fa-plus"></i> 新規作成</button>
+                        </div>
                         <div class="align-self-center">
                             <button type="button" class="btn btn-dark" @click="onBack">戻る</button>
                         </div>
                     </div>
 
-                    <table class="table-custom mb-3">
+                    <table class="table-custom" key="processes">
                         <thead>
                             <tr>
                                 <th class="text-center bg-info text-white">ID</th>
@@ -28,7 +31,7 @@
                         </thead>
             
                         <tbody>
-                            <tr v-for="aircraft in results" :key="aircraft.index" >
+                            <tr v-for="aircraft in results" class="clickable" :key="aircraft.index" @click="onShow(aircraft.id)">
                                 <td class="text-center align-middle">{{ aircraft.id }}</td>
                                 <td class="text-center align-middle">{{ aircraft.manufacturer }}</td>
                                 <td class="text-center align-middle">{{ aircraft.name }}</td>
@@ -39,8 +42,16 @@
                                 <td class="text-center align-middle">{{ aircraft.is_report }}</td>
                             </tr>
                         </tbody>
+                        <loading :active.sync="isLoading"></loading>
                     </table>
                     
+                    <pagination
+                        :page="currentPage"
+                        :itemsPerPage="itemsPerPage"
+                        :maxVisiblePages="maxVisiblePages"
+                        :totalItems="totalItems"
+                        @pageChange="pageChange"
+                    />
                     
                 </div>
             </div>
@@ -77,6 +88,12 @@ export default {
             // ↑これがControllerとの紐づけ定義
             const response = await axios.get('/aircrafts')
             this.results = response.data.data
+        },
+        onCreate: function () {
+            //this.$router.push({ name: 'customer.create' })
+        },
+        onShow: function (id) {
+            //this.$router.push({ name: 'customer.show', params: {id: id} })
         },
         onBack() {
             this.$router.push({ name: 'menu' })
