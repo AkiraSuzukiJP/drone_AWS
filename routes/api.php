@@ -21,7 +21,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('aircrafts', 'AircraftController@index');
     Route::post('aircrafts', 'AircraftController@store');
     Route::get('aircrafts/{aircrafts}', 'AircraftController@show');
-    Route::post('aircrafts/{aircrafts}', 'AircraftController@update');
+    Route::put('aircrafts/{aircrafts}', 'AircraftController@update');
     Route::delete('aircrafts', 'AircraftController@destroy');
     //Route::get('aircrafts/selector', 'AircraftController@selector');
 });
