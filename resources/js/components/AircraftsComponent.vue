@@ -63,6 +63,7 @@ export default {
         return {
             //
             results: null,
+            isLoading: false,
         }
     },
     mounted () {
@@ -77,17 +78,19 @@ export default {
     },
     methods: {
         async getInit() {
+            this.isLoading = true;
             // routes/api.phpにルーティングを設定する
             // Route::get('aircrafts', 'AircraftController@index');
             // ↑これがControllerとの紐づけ定義
             const response = await axios.get('/aircrafts')
             this.results = response.data.data
+            this.isLoading = false
         },
         onCreate: function () {
-            //this.$router.push({ name: 'customer.create' })
+            this.$router.push({ name: 'aircrafts.create' })
         },
-        onShow: function (id) {
-            this.$router.push({ name: 'aircrafts.show', params: {id: id} })
+        onShow: function (aircraft_id) {
+            this.$router.push({ name: 'aircrafts.show', params: {aircraft_id: aircraft_id} })
         },
         onBack() {
             this.$router.push({ name: 'menu' })
