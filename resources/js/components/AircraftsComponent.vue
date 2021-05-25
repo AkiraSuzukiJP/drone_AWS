@@ -43,7 +43,7 @@
                             </tr>
                         </tbody>
 
-                        <loading :active.sync="isLoading"></loading>
+                        <!--loading :active.sync="isLoading"></loading-->
             
                     </table>
 
