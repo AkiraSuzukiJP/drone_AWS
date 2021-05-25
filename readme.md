@@ -116,6 +116,7 @@ npm install vue
 npm install vue-router
 npm install vuex
 npm install bootstrap-vue
+npm install vue-loading-overlay
 
 ## Webpack を起動
 npm run dev
