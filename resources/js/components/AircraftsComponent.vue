@@ -51,6 +51,7 @@
             </div>
         </div>
     </div>
+    <loading :active.sync="isLoading" :is-full-page="fullPage"></loading>
 </div>
 </template>
 
